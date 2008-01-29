@@ -1,14 +1,15 @@
 " Vim syntax file
 " Language:  tintin
 " Maintainer:  Dave V
-" Last Change:  2007 Sep 22
+" Modified:  Mark V
+" Last Change:  2008 Jan 30
 
 " Quit when a (custom) syntax file was already loaded
 if exists("b:current_syntax")
  finish
 endif
 
-" tintin keywords
+" Tintin++ keywords (and some variations)
 
 syn keyword ttKeyword ACTION ACT action act Action Act 
 syn keyword ttKeyword ALIAS alias Alias
@@ -99,23 +100,25 @@ syn keyword ttKeyword SET set Set
 syn keyword ttKeyword SRT srt Srt
 
 
-syn region ttComment start="/\*" end="\*/"  
+
+syn region ttComment start="/\*" end="\*/"
 syn region ttQuotes start=/"/ end=/"/
 syn region ttBraces start=/{/ end=/}/ transparent fold
 
-syn match ttColor "<\w\w\w>"
+syn match ttColor "<\d\d\d>"
 syn match ttCommand "#\w\+"
 syn match ttSpecial "\^"
-syn match ttGrep "%\w\+"
+syn match ttCmdSep "\;"
+syn match ttVariable "%\d\+"
 
-hi def link ttGrep String 
-hi def link ttColor Identifier 
+hi def link ttVariable String
+hi def link ttColor Identifier
 hi def link ttSpecial Special
 hi def link ttComment Comment
 hi def link ttQuotes String
 hi def link ttBraces Special
 hi def link ttCommand Function
-
-
+hi def link ttCmdSep Operator
 
 let b:current_syntax = "tintin"
+
