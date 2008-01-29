@@ -1,0 +1,9 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2133
+
+TinTin++ is a free mud client that runs on the Windows, Linux, and Mac OSX platforms.
+
+if can be found here: http://tintin.sourceforge.net/ 
+
+contains syntax for commands, color codes, comments, braces, quotes, and variables cmd separators, although this is pretty average, and doesnt do nearly as much as i want it to do. 
+
+for a better version, check this out http://www.vim.org/scripts/script.php?script_id=2135
